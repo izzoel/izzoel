@@ -29,12 +29,8 @@ Currently, I am focused on web-based development.
 ![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white)
 ![Packet Tracer](https://img.shields.io/badge/-Packet%20Tracer-0096D6?style=for-the-badge&logo=cisco&logoColor=white)
 
-## Github Stats##
+## Github Stats
 ![Izzoel's GitHub Stats](https://github-readme-stats.vercel.app/api?username=izzoel&show_icons=true&count_private=true&hide=prs&theme=dark)
-
-## GitHub Trophy
-
-![Trophy](https://github-profile-trophy.vercel.app/?username=izzoel)
 
 <!--
 **izzoel/izzoel** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
