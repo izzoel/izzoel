@@ -1,4 +1,10 @@
-## Hi there 👋
+## Greeting 👋 ##
+
+This is collection of my work 
+some is still develop.. some is has been release..
+use as wise..
+
+- Z.R 17/08/2024 
 
 <!--
 **izzoel/izzoel** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
