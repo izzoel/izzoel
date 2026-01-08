@@ -30,7 +30,7 @@ Currently, I am focused on web-based development.
 ![Packet Tracer](https://img.shields.io/badge/-Packet%20Tracer-0096D6?style=for-the-badge&logo=cisco&logoColor=white)
 
 ## Github Stats
-[![Izzoel's GitHub stats](https://github-readme-stats-fast.vercel.app/api?username=izzoel)]
+![Izzoel's GitHub stats](https://github-readme-stats-fast.vercel.app/api?username=izzoel&show_icons=true&theme=vision-friendly-dark)
 
 <!--![Izzoel's GitHub Stats](https://github-readme-stats.vercel.app/api?username=izzoel&show_icons=true&count_private=true&hide=prs&theme=dark)-->
 
