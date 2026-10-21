@@ -8,18 +8,26 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-      - uses: yoshi389111/github-profile-3d-contrib@0.7.1
+      - name: Generate 3D Contribution Graph
+        uses: yoshi389111/github-profile-3d-contrib@0.7.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
+
+      - name: Copy SVG to Root Directory
+        run: |
+          cp profile-3d-contrib/profile-night-rainbow.svg contribution-forest.svg
 
       - name: Commit and Push SVG
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
+          git add contribution-forest.svg
           git commit -m "Chore: Update contribution forest SVG" || exit 0
           git push
