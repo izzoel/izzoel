@@ -19,7 +19,7 @@ Currently, I am focused on web-based development.
 ![Bootstrap](https://img.shields.io/badge/-Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![Git](https://img.shields.io/badge/-Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![MySQL](https://img.shields.io/badge/-MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![C++](https://img.shields.io/badge/-C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+![C++](https://img.shields.io/badge/-C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 ![C#](https://img.shields.io/badge/-C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
 
 ## Tools ##
@@ -32,19 +32,16 @@ Currently, I am focused on web-based development.
 ## Github Stats
 ![Izzoel's GitHub stats](https://github-readme-stats-fast.vercel.app/api?username=izzoel&show_icons=true&theme=vision-friendly-dark)
 
-<!--![Izzoel's GitHub Stats](https://github-readme-stats.vercel.app/api?username=izzoel&show_icons=true&count_private=true&hide=prs&theme=dark)-->
+## Contribution Forest ##
 
-<!--
-**izzoel/izzoel** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+![Contribution Forest](https://raw.githubusercontent.com/izzoel/izzoel/main/contribution-forest.svg)
 
-Here are some ideas to get you started:
+<p align="center">
+  <i>A year of growing — one day, one tile. Updated daily with my GitHub contribution calendar.</i>
+</p>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+<p align="center">
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=izzoel.izzoel&left_color=gray&right_color=blue" alt="visitors" />
+</p>
