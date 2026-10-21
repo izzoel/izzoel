@@ -1,33 +1,50 @@
-name: Generate Contribution Forest
+name: Update Contribution Forest
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: '17 0 * * *'
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/contribution-forest*.mjs
+      - .github/workflows/contribution-forest.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: contribution-forest
+  cancel-in-progress: false
 
 jobs:
-  build:
+  forest:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    timeout-minutes: 5
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: Generate 3D Contribution Graph
-        uses: yoshi389111/github-profile-3d-contrib@0.7.1
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+      - name: Test renderer
+        run: node --test scripts/contribution-forest.test.mjs
+      - name: Generate contribution forest
+        run: node scripts/contribution-forest.mjs
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          USERNAME: ${{ github.repository_owner }}
-
-      - name: Copy SVG to Root Directory
+          GH_TOKEN: ${{ secrets.GH_STATS_TOKEN || github.token }}
+          GITHUB_USERNAME: ${{ github.repository_owner }}
+      - name: Publish SVG
         run: |
-          cp profile-3d-contrib/profile-night-rainbow.svg contribution-forest.svg
-
-      - name: Commit and Push SVG
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add contribution-forest.svg
-          git commit -m "Chore: Update contribution forest SVG" || exit 0
-          git push
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'forest: update contribution calendar [skip ci]'
+          # Rebase if the stats workflow updated its own SVGs in the meantime.
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            if git push origin HEAD:main; then exit 0; fi
+          done
+          exit 1
